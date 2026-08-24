@@ -1,0 +1,20 @@
+設問１：B 　
+設問２：B  
+設問３：A
+設問4：A
+設問5：C
+設問６：A
+設問７：B
+設問８：C
+設問９：docker --version
+設問10:docker ps -a
+設問11：docker stop abc123
+設問12：cd /home/user/documents
+設問13：ls -l
+設問14：touch notes.txt
+設問15:B
+設問16:a
+設問17:C
+設問18：C
+設問19：C
+設問20：A

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interactive Card</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .card {
+            background-color: #ffffff;
+            color: #333333;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background-color: #b30300;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card" id="card">
+        <h2 id="heading">Hello, World!</h2>
+        <p>Click the button below to switch themes.</p>
+        <button onclick="toggleTheme()">Change Theme</button>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const card = document.getElementById('card');
+            const heading = document.getElementById('heading');
+            
+            // Check if we are currently in dark mode
+            if (body.style.backgroundColor === 'rgb(34, 34, 34)') {
+                // Switch to Light Mode
+                body.style.backgroundColor = '#f4f4f9';
+                card.style.backgroundColor = '#ffffff';
+                card.style.color = '#333333';
+                heading.textContent = 'Hello, World!';
+            } else {
+                // Switch to Dark Mode
+                body.style.backgroundColor = '#222222';
+                card.style.backgroundColor = '#333333';
+                card.style.color = '#ffffff';
+                heading.textContent = 'Welcome to Dark Mode!';
+            }
+        }
+    </script>
+
+</body>
+</html>
